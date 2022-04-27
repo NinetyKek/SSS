@@ -18,18 +18,20 @@ end)() end
 if Bo then coroutine.wrap(function(Booster)
     while true do 
 	coroutine.wrap(function()
-            RequestTeleportToZone = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.RequestTeleportToZone
-            CompleteZoneObby = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.CompleteZoneObby
-            RequestTeleportToZone:InvokeServer("Lost Valley Obby", "Green Hill Exit")
-            CompleteZoneObby:InvokeServer()
-            wait(0.3)
-            RequestTeleportToZone:InvokeServer("Emerald Hill Obby", "Lost Valley Exit")
-            CompleteZoneObby:InvokeServer()
-            wait(0.3)
-            RequestTeleportToZone:InvokeServer("Snow Valley Obby", "Emerald Hill Exit")
-            CompleteZoneObby:InvokeServer()
-            RequestTeleportToZone:InvokeServer("Green Hill", "Lost Valley Obby Entrance")
-            wait(0.3)
+	    while true do					
+		 RequestTeleportToZone = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.RequestTeleportToZone
+		 CompleteZoneObby = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.CompleteZoneObby
+		 RequestTeleportToZone:InvokeServer("Lost Valley Obby", "Green Hill Exit")
+		 CompleteZoneObby:InvokeServer()
+		 wait(0.3)
+		 RequestTeleportToZone:InvokeServer("Emerald Hill Obby", "Lost Valley Exit")
+		 CompleteZoneObby:InvokeServer()
+		 wait(0.3)
+		 RequestTeleportToZone:InvokeServer("Snow Valley Obby", "Emerald Hill Exit")
+		 CompleteZoneObby:InvokeServer()
+		 RequestTeleportToZone:InvokeServer("Green Hill", "Lost Valley Obby Entrance")
+		 wait(0.3)
+	    end
     	end)() 
      wait (120) 
 end end)() end
