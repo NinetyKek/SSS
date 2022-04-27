@@ -33,8 +33,10 @@ if Bo then coroutine.wrap(function(Booster)
 		 wait(0.3)
 	    end
     	end)() 
-     wait(120) 
-end end)() end
+     	wait(120) 
+	end 
+    end)() 
+end
 
 if Re then coroutine.wrap(function(Rebirther)
     while true do
