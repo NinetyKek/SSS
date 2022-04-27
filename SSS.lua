@@ -1,5 +1,6 @@
-game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
-
+if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
+	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
+end
 
 if Co then coroutine.wrap(function(Collector)
     while true do
