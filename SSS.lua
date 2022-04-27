@@ -16,7 +16,8 @@ if Co then coroutine.wrap(function(Collector)
 end)() end
 
 if Bo then coroutine.wrap(function(Booster)
-    while true do coroutine.wrap(function()
+    while true do 
+	coroutine.wrap(function()
             RequestTeleportToZone = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.RequestTeleportToZone
             CompleteZoneObby = game:GetService("ReplicatedStorage").Knit.Services.ZoneService.RF.CompleteZoneObby
             RequestTeleportToZone:InvokeServer("Lost Valley Obby", "Green Hill Exit")
@@ -29,8 +30,9 @@ if Bo then coroutine.wrap(function(Booster)
             CompleteZoneObby:InvokeServer()
             RequestTeleportToZone:InvokeServer("Green Hill", "Lost Valley Obby Entrance")
             wait(0.3)
-    end)() wait () end 
-end)() end
+    	end)() 
+     wait (120) 
+end end)() end
 
 if Re then coroutine.wrap(function(Rebirther)
     while true do
