@@ -1,12 +1,3 @@
----------By _90_#0001------------
--- Auto Collect
-Co = true
--- Booster
--- WARNING: Makes game look awful
-Bo = true
--- Auto Rebirth
-Re = true
----------------------------------
 if  game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
     game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
 end
