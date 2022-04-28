@@ -2,6 +2,18 @@ if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
 	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
 end
 
+coroutine.wrap(function(claimer)
+i = 17
+while true do
+    i = i - 1
+    game:GetService("ReplicatedStorage").Knit.Services.GratitudeService.RF.AcquireReward:InvokeServer(i)
+    if i == 0 then
+        i = 16
+    end
+    wait()
+end
+end()
+
 if St then coroutine.wrap(function(Stepper)
 local Players = game:GetService("Players");
 local TweenService = game:GetService("TweenService");
