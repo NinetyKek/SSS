@@ -2,37 +2,37 @@ if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
 	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
 end
 
-coroutine.wrap(function(claimer)
-inumber = 17
-while true do
-    inumber = inumber - 1
-    game:GetService("ReplicatedStorage").Knit.Services.GratitudeService.RF.AcquireReward:InvokeServer(inumber)
-    if inumber == 0 then
-        inumber = 16
-    end
-    wait(5)
-end
-end()
+-- coroutine.wrap(function(claimer)
+-- 	inumber = 17
+-- 	while true do
+-- 	    inumber = inumber - 1
+-- 	    game:GetService("ReplicatedStorage").Knit.Services.GratitudeService.RF.AcquireReward:InvokeServer(inumber)
+-- 	    if inumber == 0 then
+-- 		inumber = 16
+-- 	    end
+-- 	    wait(5)
+-- 	end
+-- end()
 
 if St then coroutine.wrap(function(Stepper)
-local Players = game:GetService("Players");
-local TweenService = game:GetService("TweenService");
-local RunService = game:GetService("RunService");
-local RootPart = Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart");
-local TweenData = TweenInfo.new(math.random(1,99), Enum.EasingStyle.Linear);
-local Rand = math.random(1,999999999);
+	local Players = game:GetService("Players");
+	local TweenService = game:GetService("TweenService");
+	local RunService = game:GetService("RunService");
+	local RootPart = Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart");
+	local TweenData = TweenInfo.new(math.random(1,99), Enum.EasingStyle.Linear);
+	local Rand = math.random(1,999999999);
 
-function TP()
-    local TPCFrame = CFrame.new(Rand,Rand,Rand);
-    local tween,err = pcall(function()
-        local tween = TweenService:Create(RootPart, TweenData, {CFrame=TPCFrame});
-        tween:Play();
-    end)
-end
+	function TP()
+	    local TPCFrame = CFrame.new(Rand,Rand,Rand);
+	    local tween,err = pcall(function()
+		local tween = TweenService:Create(RootPart, TweenData, {CFrame=TPCFrame});
+		tween:Play();
+	    end)
+	end
 
-RunService.RenderStepped:Connect(function()
-    pcall(function() TP(); end)
-end)
+	RunService.RenderStepped:Connect(function()
+	    pcall(function() TP(); end)
+	end)
 end)() end
 
 
