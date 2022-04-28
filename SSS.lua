@@ -2,6 +2,31 @@ if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
 	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
 end
 
+if St then coroutine.wrap(function(Stepper)
+local Players = game:GetService("Players");
+local TweenService = game:GetService("TweenService");
+local RunService = game:GetService("RunService");
+local RootPart = Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart");
+local TweenData = TweenInfo.new(math.random(1,99), Enum.EasingStyle.Linear);
+local Rand = math.random(1,999999999);
+
+function TP()
+    local TPCFrame = CFrame.new(Rand,Rand,Rand);
+    local tween,err = pcall(function()
+        local tween = TweenService:Create(RootPart, TweenData, {CFrame=TPCFrame});
+        tween:Play();
+    end)
+end
+
+RunService.RenderStepped:Connect(function()
+    pcall(function() TP(); end)
+end)
+end)() end
+
+
+
+			
+
 if Co then coroutine.wrap(function(Collector)
     while true do
         for i,v in pairs(game:GetService("Workspace").Map.Objects:GetDescendants()) do
