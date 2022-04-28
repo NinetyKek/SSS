@@ -3,14 +3,14 @@ if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
 end
 
 coroutine.wrap(function(claimer)
-i = 17
+inumber = 17
 while true do
-    i = i - 1
-    game:GetService("ReplicatedStorage").Knit.Services.GratitudeService.RF.AcquireReward:InvokeServer(i)
-    if i == 0 then
-        i = 16
+    inumber = inumber - 1
+    game:GetService("ReplicatedStorage").Knit.Services.GratitudeService.RF.AcquireReward:InvokeServer(inumber)
+    if inumber == 0 then
+        inumber = 16
     end
-    wait()
+    wait(5)
 end
 end()
 
