@@ -1,6 +1,6 @@
-if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
-	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
-end
+-- if game:GetService("ReplicatedStorage").Assets.Lighting ~= nil then
+-- 	game:GetService("ReplicatedStorage").Assets.Lighting:Destroy()
+-- end
 
 -- coroutine.wrap(function(claimer)
 -- 	inumber = 17
@@ -33,11 +33,7 @@ if St then coroutine.wrap(function(Stepper)
 	RunService.RenderStepped:Connect(function()
 	    pcall(function() TP(); end)
 	end)
-end)() end
-
-
-
-			
+end)() end	
 
 if Co then coroutine.wrap(function(Collector)
     while true do
