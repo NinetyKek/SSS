@@ -1,0 +1,5 @@
+for i, v in pairs(game.Workspace.Camera:GetChildren()) do
+    if string.sub(v.Name, 1, 6) == "Precip" then
+        v:Destroy()
+    end
+end
